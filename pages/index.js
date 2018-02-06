@@ -11,14 +11,34 @@ const Index = (props) => {
                 <h1>James Bond Movies</h1>
             </div>
             <div>
-                <ul>
+                <div className="movies-container">
                     
-                    {props.movies.map((movie, key) => {
-                        return <li key={key}><Link as={`/p/${movie.id}`} href={`/post?id=${movie.id}`}><a>{movie.original_title}</a></Link></li>
+                    {props.movies.filter((movie, key) => { return movie.original_language === 'en'}).map((movie, key) => {
+
+                        return <div key={key} className="movie">
+                                    <Link as={`/p/${movie.id}`} href={`/post?id=${movie.id}`}>
+
+                                            <a><img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}/></a>
+
+                                    </Link>
+                                </div>
+
                     })}
 
-                </ul>
+                </div>
             </div>
+            <style jsx>{`
+                .movies-container {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                }
+                .movie {
+                    max-width: 185px;
+                    height: auto;
+                }
+            `}</style> 
         </Layout>
     )
 }
