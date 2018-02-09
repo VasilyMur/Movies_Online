@@ -81,9 +81,6 @@ const Header = () => {
             </div>
 
             <style jsx>{`
-                header {
-                    margin-bottom: 2rem;
-                }
 
                 .main-header {
                     display: flex;

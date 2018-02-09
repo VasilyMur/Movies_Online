@@ -20,8 +20,10 @@ export default () => {
                   
                   .inner {
                     max-width:900px;
-                    margin: 0 auto;
+                    margin: 2rem auto 0;
                   }
+
+          
 
                   .main-header a {
                     text-decoration: none;
@@ -120,6 +122,10 @@ export default () => {
                     cursor: default;
                 }
                 input[type=checkbox], input[type=radio] {
+                    box-sizing: border-box;
+                    padding: 0;
+                }
+                input[type=text] {
                     box-sizing: border-box;
                     padding: 0;
                 }

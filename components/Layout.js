@@ -2,13 +2,21 @@ import Header from '../components/Header';
 import Head from '../components/Head';
 
 const Layout = (props) => {
+
     return (
         <div>
+
             <Head />
             <Header />
-            <div className="inner">
+                
+
+            <div className="content">
                 {props.children}
             </div>
+                        
+                    
+
+
             
         </div>
     )
